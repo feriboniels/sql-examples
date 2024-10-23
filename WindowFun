@@ -1,0 +1,7 @@
+SELECT ROW_NUMBER () 
+OVER (partition by Product order by Amount DESC) as prd 
+, OrderDate ,Product, Quantity, Amount 
+FROM ORDERS;
+
+SELECT RANK()  over(order by Amount DESC ), 
+OrderDate ,Product ,Quantity ,Amount from Orders;
